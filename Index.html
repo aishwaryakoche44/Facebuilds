@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Facebuilds is redesigning the experience. Back shortly.">
+  <title>Facebuilds — Back shortly</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      --blue: #1043f5;
+      --white: #f5f5f3;
+      --muted: #a4a4a2;
+      --edge: #242424;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      color: var(--white);
+      background: #050505;
+    }
+
+    .page {
+      display: flex;
+      flex-direction: column;
+      width: min(100% - 96px, 1280px);
+      min-height: 100vh;
+      margin: 0 auto;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 94px;
+      border-bottom: 1px solid var(--edge);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--white);
+      font-size: 17px;
+      font-weight: 650;
+      letter-spacing: -.045em;
+      text-decoration: none;
+    }
+
+    .brand img {
+      display: block;
+      width: 42px;
+      height: 42px;
+      object-fit: cover;
+    }
+
+    .header-note {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .04em;
+    }
+
+    main {
+      display: grid;
+      flex: 1;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, .82fr);
+      align-items: center;
+      gap: clamp(32px, 7vw, 110px);
+      padding: 48px 0 54px;
+    }
+
+    .copy { max-width: 690px; }
+
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 29px;
+      color: #c5c5c3;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      width: 19px;
+      height: 2px;
+      background: var(--blue);
+      content: "";
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(48px, 6.4vw, 82px);
+      font-weight: 560;
+      letter-spacing: -.075em;
+      line-height: .99;
+    }
+
+    h1 span { display: block; }
+
+    h1 .accent {
+      margin-top: 12px;
+      color: var(--blue);
+    }
+
+    .message {
+      max-width: 410px;
+      margin: 27px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .brand-art {
+      display: grid;
+      min-height: 370px;
+      place-items: center;
+    }
+
+    .brand-art img {
+      display: block;
+      width: min(100%, 410px);
+      height: auto;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+
+    .site-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 70px;
+      border-top: 1px solid var(--edge);
+      color: #858583;
+      font-size: 11px;
+    }
+
+    .footer-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-status::before {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--blue);
+      content: "";
+    }
+
+    @media (max-width: 760px) {
+      .page { width: min(100% - 44px, 580px); }
+      .site-header { min-height: 76px; }
+      .brand img { width: 36px; height: 36px; }
+      main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 72px 0 58px;
+      }
+      .brand-art {
+        min-height: 0;
+        padding-top: 30px;
+      }
+      .brand-art img { width: min(68vw, 280px); }
+      h1 { font-size: clamp(48px, 11vw, 72px); }
+    }
+
+    @media (max-width: 420px) {
+      .header-note { font-size: 10px; }
+      .site-footer { font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Facebuilds">
+        <img src="Black%20and%20White%20Modern%20Minimalist%20Typography%20Marketing%20Agency%20Brand%20Logo_20261025_221447_0000.png" alt="">
+        <span>facebuilds</span>
+      </a>
+      <span class="header-note">A little work in progress</span>
+    </header>
+
+    <main>
+      <section class="copy" aria-labelledby="headline">
+        <p class="kicker">We’re making things better</p>
+        <h1 id="headline">
+          <span>Redesigning</span>
+          <span>the Experience.</span>
+          <span class="accent">Back Shortly...</span>
+        </h1>
+        <p class="message">We’re refreshing our website and will be back soon. Thanks for bearing with us.</p>
+      </section>
+      <div class="brand-art">
+        <img src="Black%20and%20White%20Modern%20Minimalist%20Typography%20Marketing%20Agency%20Brand%20Logo_20261025_221447_0000.png" alt="Facebuilds blue monogram logo">
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Facebuilds</span>
+      <span class="footer-status">Website update in progress</span>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
